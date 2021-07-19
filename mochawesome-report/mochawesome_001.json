@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-07-16T10:16:53.193Z",
+    "end": "2021-07-16T10:17:36.719Z",
+    "duration": 43526,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "24e4a613-4e7c-43f7-a726-12e1b3c77ceb",
+      "title": "",
+      "fullFile": "cypress/integration/fs/elements.js",
+      "file": "cypress/integration/fs/elements.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "07649a55-ecd3-4e41-ac9d-50efbe45c82f",
+          "title": "Demo QA Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload File Test",
+              "fullTitle": "Demo QA Testing Upload File Test",
+              "timedOut": null,
+              "duration": 33358,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"screenshots/fs/elements.js/Demo QA Testing -- Upload File Test (failed).png\"",
+              "code": "const filePath = 'files/example.json';\nconst homePage = new _HomePage.default();\nconst leftNavPage = new _LeftNavPage.default();\nconst uploaddownloadPage = new _uploadDownloadPage.default();\nhomePage.clickElementsLink();\nleftNavPage.clickUploadDownloadLink();\nuploaddownloadPage.clickAndChooseFile(filePath);\nuploaddownloadPage.getFilePathText().should(\"have.text\", \"examplea.json\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<p#uploadedFilePath>' to have text 'examplea.json', but the text was 'C:\\\\fakepath\\\\example.json'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<p#uploadedFilePath>' to have text 'examplea.json', but the text was 'C:\\\\fakepath\\\\example.json'\n    at Context.eval (https://demoqa.com/__cypress/tests?p=cypress\\integration\\fs\\elements.js:141:42)",
+                "diff": "- 'C:\\\\fakepath\\\\example.json'\n+ 'examplea.json'\n"
+              },
+              "uuid": "c055a441-34ac-4555-8532-b48dd23b99d6",
+              "parentUUID": "07649a55-ecd3-4e41-ac9d-50efbe45c82f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c055a441-34ac-4555-8532-b48dd23b99d6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 33358,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

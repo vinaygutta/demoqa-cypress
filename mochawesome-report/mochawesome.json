@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 2,
+    "pending": 0,
+    "failures": 3,
+    "start": "2021-07-16T10:14:18.540Z",
+    "end": "2021-07-16T10:16:28.044Z",
+    "duration": 129504,
+    "testsRegistered": 5,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dac5135d-d7a4-4035-b75f-fcb2a040a622",
+      "title": "",
+      "fullFile": "cypress/integration/fs/alerts.js",
+      "file": "cypress/integration/fs/alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1fcd98f9-3199-478d-bc98-8a4ae9b28d02",
+          "title": "Demo QA Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Alert Test",
+              "fullTitle": "Demo QA Testing Alert Test",
+              "timedOut": null,
+              "duration": 26904,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _HomePage.default();\nconst leftNavPage = new _LeftNavPage.default();\nconst alertsPage = new _AlertsPage.default();\nhomePage.clickAlertsFrmLink();\nleftNavPage.clickAlertsLink();\nalertsPage.clickAlertButtonAndAssert();",
+              "err": {},
+              "uuid": "32df27d2-5ba4-4db8-a503-c58f0f9fa839",
+              "parentUUID": "1fcd98f9-3199-478d-bc98-8a4ae9b28d02",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Timed Alert Test",
+              "fullTitle": "Demo QA Testing Timed Alert Test",
+              "timedOut": null,
+              "duration": 12982,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _HomePage.default();\nconst leftNavPage = new _LeftNavPage.default();\nconst alertsPage = new _AlertsPage.default();\nhomePage.clickAlertsFrmLink();\nleftNavPage.clickAlertsLink();\nalertsPage.clickTimerAlertButton();",
+              "err": {},
+              "uuid": "33770cbe-42ef-4e00-a61f-f3e6303d5c38",
+              "parentUUID": "1fcd98f9-3199-478d-bc98-8a4ae9b28d02",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Confirm Box Alert Test - Click OK",
+              "fullTitle": "Demo QA Testing Confirm Box Alert Test - Click OK",
+              "timedOut": null,
+              "duration": 18913,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"screenshots/fs/alerts.js/Demo QA Testing -- Confirm Box Alert Test - Click OK (failed).png\"",
+              "code": "const homePage = new _HomePage.default();\nconst leftNavPage = new _LeftNavPage.default();\nconst alertsPage = new _AlertsPage.default();\nhomePage.clickAlertsFrmLink();\nleftNavPage.clickAlertsLink();\nalertsPage.clickConfirmButtonAndOK();\nalertsPage.getConfirmBoxResultLink().should(\"have.text\", \"You selected Oka\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span#confirmResult.text-success>' to have text 'You selected Oka', but the text was 'You selected Ok'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span#confirmResult.text-success>' to have text 'You selected Oka', but the text was 'You selected Ok'\n    at Context.eval (https://demoqa.com/__cypress/tests?p=cypress\\integration\\fs\\alerts.js:156:42)",
+                "diff": "- 'You selected Ok'\n+ 'You selected Oka'\n"
+              },
+              "uuid": "950362aa-842e-4464-8714-2e6f8bcec21e",
+              "parentUUID": "1fcd98f9-3199-478d-bc98-8a4ae9b28d02",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Confirm Box Alert Test - Click Cancel",
+              "fullTitle": "Demo QA Testing Confirm Box Alert Test - Click Cancel",
+              "timedOut": null,
+              "duration": 21542,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"screenshots/fs/alerts.js/Demo QA Testing -- Confirm Box Alert Test - Click Cancel (failed).png\"",
+              "code": "const homePage = new _HomePage.default();\nconst leftNavPage = new _LeftNavPage.default();\nconst alertsPage = new _AlertsPage.default();\nhomePage.clickAlertsFrmLink();\nleftNavPage.clickAlertsLink();\nalertsPage.clickConfirmButtonAndCancel();\nalertsPage.getConfirmBoxResultLink().should(\"have.text\", \"You selected Cancela\"); // alertsPage.clickPromptButton()",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span#confirmResult.text-success>' to have text 'You selected Cancela', but the text was 'You selected Cancel'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span#confirmResult.text-success>' to have text 'You selected Cancela', but the text was 'You selected Cancel'\n    at Context.eval (https://demoqa.com/__cypress/tests?p=cypress\\integration\\fs\\alerts.js:165:42)",
+                "diff": "- 'You selected Cancel'\n+ 'You selected Cancela'\n"
+              },
+              "uuid": "3d53d574-06cc-4394-a543-34c16a939491",
+              "parentUUID": "1fcd98f9-3199-478d-bc98-8a4ae9b28d02",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Prompt button Test",
+              "fullTitle": "Demo QA Testing Prompt button Test",
+              "timedOut": null,
+              "duration": 30175,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"screenshots/fs/alerts.js/Demo QA Testing -- Prompt button Test (failed).png\"",
+              "code": "const homePage = new _HomePage.default();\nconst leftNavPage = new _LeftNavPage.default();\nconst alertsPage = new _AlertsPage.default();\nhomePage.clickAlertsFrmLink();\nleftNavPage.clickAlertsLink();\nalertsPage.clickPromptButton();\nalertsPage.getPromptResultLink().should(\"have.text\", \"You entered This is a test texta\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span#promptResult.text-success>' to have text 'You entered This is a test texta', but the text was 'You entered This is a test text'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span#promptResult.text-success>' to have text 'You entered This is a test texta', but the text was 'You entered This is a test text'\n    at Context.eval (https://demoqa.com/__cypress/tests?p=cypress\\integration\\fs\\alerts.js:174:38)",
+                "diff": "- 'You entered This is a test text'\n+ 'You entered This is a test texta'\n"
+              },
+              "uuid": "02a0b659-c205-432a-9396-2e51b6a04ef6",
+              "parentUUID": "1fcd98f9-3199-478d-bc98-8a4ae9b28d02",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32df27d2-5ba4-4db8-a503-c58f0f9fa839",
+            "33770cbe-42ef-4e00-a61f-f3e6303d5c38"
+          ],
+          "failures": [
+            "950362aa-842e-4464-8714-2e6f8bcec21e",
+            "3d53d574-06cc-4394-a543-34c16a939491",
+            "02a0b659-c205-432a-9396-2e51b6a04ef6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 110516,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

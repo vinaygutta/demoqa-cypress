@@ -1,0 +1,11 @@
+{
+  "confirmMessage": "Do you confirm action?",
+  "alertMessage": "You clicked a button",
+  "timerAlertMessage": "This alert appeared after 5 seconds",
+  "promptAlertInput":"This is a test text",
+  "confirmBoxResultOK":"You selected Ok",
+  "confirmBoxResultCancel":"You selected Cancel",
+  "promptBoxResult":"You entered This is a test text",
+  "smallModelText":"This is a small modal. It has very less content",
+  "filePathText":"example.json"
+}
