@@ -12,7 +12,7 @@
     "chrome": "npm install && npm run clean:reports && cypress run --browser chrome & npm run generate:html:report",
     "ff": "npm install && npm run clean:reports && cypress run --browser firefox & npm run generate:html:report"
   },
-  "author": "",
+  "author": "Vinay Babu",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^7.7.0",
