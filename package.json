@@ -9,8 +9,8 @@
     "create:html:report": "marge mochawesome-report/HTMLReport/all-tests-report.json --reportDir ./ --inline",
     "generate:html:report": "npm run merge:reports && npm run create:html:report",
     "test": "cypress run",
-    "chrome": "npm run clean:reports && cypress run --browser chrome & npm run generate:html:report",
-    "ff": "npm run clean:reports && cypress run --browser firefox & npm run generate:html:report"
+    "chrome": "npm install && npm run clean:reports && cypress run --browser chrome & npm run generate:html:report",
+    "ff": "npm install && npm run clean:reports && cypress run --browser firefox & npm run generate:html:report"
   },
   "author": "",
   "license": "ISC",
