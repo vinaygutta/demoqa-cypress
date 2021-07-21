@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
-import BaseTest from '../../support/pom/BaseTest'
+import EyesUtil from '../../support/eyes/EyesUtil'
+import BaseTest from '../../support/base/BaseTest'
 import HomePage from '../../support/pom/HomePage'
 import LeftNavPage from '../../support/pom/LeftNavPage'
 import RegistrationPage from '../../support/pom/RegistrationPage'
@@ -8,9 +9,12 @@ import WebTablesPage from '../../support/pom/WebTablesPage'
 
 describe('Demo QA Testing', () => {
 
+  const eyesUtil = new EyesUtil()
+
   beforeEach(() => {
     const baseTest = new BaseTest()
     baseTest.openHomePage()
+    eyesUtil.appEyesOpen("Demo QA")
   })
 
   it('Upload File Test', () => {
@@ -20,9 +24,14 @@ describe('Demo QA Testing', () => {
     const uploaddownloadPage = new UploadDownloadPage()
 
     homePage.clickElementsLink()
+
+    eyesUtil.appEyesCheck("Elements Page")
+
     leftNavPage.clickUploadDownloadLink()
     uploaddownloadPage.clickAndChooseFile(filePath)
     uploaddownloadPage.validateFilePathText()
+
+    eyesUtil.appEyesClose()
   })
 
   it('Check mandatory fields highilited in color on web table', () => {

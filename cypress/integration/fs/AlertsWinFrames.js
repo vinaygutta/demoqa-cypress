@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 import AlertsPage from '../../support/pom/AlertsPage'
-import BaseTest from '../../support/pom/BaseTest'
+import BaseTest from '../../support/base/BaseTest'
 import HomePage from '../../support/pom/HomePage'
 import LeftNavPage from '../../support/pom/LeftNavPage'
 import ModelDialogPage from '../../support/pom/ModelDialogPage'
